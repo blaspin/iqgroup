@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "1f6f9d7a-2225-4205-8f9d-9082ab99e16f",
+		"name": "apiReq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29150477"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/getToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.request.url.toString());",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "name",
+						"value": "Manager",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "manager",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getToken",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/req",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "nkjkrFjBmOTpBJVS4TIuMGBJmBqvx2qXUtbaT96NLSU12oPF5gv1Et3j52hVj6s5pQqcVwn8D0ZbR54d",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/req",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"req"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/req/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "nkjkrFjBmOTpBJVS4TIuMGBJmBqvx2qXUtbaT96NLSU12oPF5gv1Et3j52hVj6s5pQqcVwn8D0ZbR54d",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/req/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"req",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/req",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "topic",
+						"value": "Title",
+						"type": "text"
+					},
+					{
+						"key": "message",
+						"value": "Something to say",
+						"type": "text"
+					},
+					{
+						"key": "api_token",
+						"value": "nkjkrFjBmOTpBJVS4TIuMGBJmBqvx2qXUtbaT96NLSU12oPF5gv1Et3j52hVj6s5pQqcVwn8D0ZbR54d",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/req",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"req"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/req/control",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "nkjkrFjBmOTpBJVS4TIuMGBJmBqvx2qXUtbaT96NLSU12oPF5gv1Et3j52hVj6s5pQqcVwn8D0ZbR54d",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/req/control",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"req",
+						"control"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/req/control",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "status",
+						"value": "%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%BE",
+						"type": "text"
+					},
+					{
+						"key": "comment",
+						"value": "Something to comment",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "api_token",
+						"value": "nkjkrFjBmOTpBJVS4TIuMGBJmBqvx2qXUtbaT96NLSU12oPF5gv1Et3j52hVj6s5pQqcVwn8D0ZbR54d",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/req/control",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"req",
+						"control"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
